@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* Banner general */
+.horizontal{
+    width: 100%;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-evenly;
+}
+/* Banner Texto */
+.bannerText{
+    margin-top: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.btnInicio{
+    text-decoration: none;
+    color: black;
+    border: 5px solid wheat;
+    border-radius: 20px;
+    padding: 10px;
+}
+.cambioFuente{
+    font-family: "Great Vibes", serif;
+    font-weight: 128;
+    font-style: normal;
+    font-size: 80px;
+    margin: -10px;
+}
+.tituloInicio{
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: -5px;
+    font-size: 35px ;
+    font-family: "Roboto Condensed", serif;
+}
+
+/* Banner imagen */
+.bannerImg{
+    background-image:url("https://ninaconamore.com/cdn/shop/files/IMG_6050.jpg?v=1704413428&width=533") ;
+    background-position: center;
+    background-size: cover;
+    width: 40%;
+    height: 600px;
+}
+
+
+/* Redes */
+.redes{
+    margin-left:5%;
+    display: flex;
+    gap: 15px;
+}
+.linkRedes{
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+}
+
+
+
+
