@@ -1,6 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    border: 0;
+    margin: 0;
+}
+
+/* Header */
+.header{
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    justify-content: space-evenly;
+    gap: 15%;
+    width: 100%;
+background-color: wheat;
+}
+.btnPreHeader{
+    background-color: #BDB2FF;
+    padding: 8px;
+    border-radius: 15px;    
+    color: black;
+    text-decoration: none;
+
+}
+.navbarLinea{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.divisor{
+    width: 200%;
+    border: 1px solid #5a5a5a;
+
+}
+.navbar{
+    display: flex;
+    gap: 20px;
+}
+.linkNav{
+    text-decoration: none;
+    color: black;
+}
+.logoHeader{
+    width: 15%;
+}
 /* Banner general */
+.banner{
+    background-color: #FFCFCF;
+}
 .horizontal{
     width: 100%;
     display: flex;
@@ -16,7 +69,8 @@
 }
 .btnInicio{
     text-decoration: none;
-    color: black;
+    color: white;
+    background-color:  #BDB2FF;
     border: 5px solid wheat;
     border-radius: 20px;
     padding: 10px;
