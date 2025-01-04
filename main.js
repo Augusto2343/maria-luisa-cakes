@@ -22,3 +22,4 @@ navRedes.onmouseleave = () =>{
     linkFac.classList.remove("fa-bounce");
     linkTik.classList.remove("fa-bounce");
 }
+
