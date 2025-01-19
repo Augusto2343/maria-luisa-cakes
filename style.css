@@ -489,7 +489,7 @@ textarea:focus {
 }
 
 /* estilos footer */
-footer {
+/* footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -502,6 +502,8 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-weight: 400;
+  
 }
 
 .mapaSitio ul li {
@@ -511,7 +513,7 @@ footer {
 .mapaSitio ul li a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+ 
 }
 
 .redesFooter {
@@ -549,7 +551,93 @@ footer .mapaSitio {
 
 footer .logo {
     text-align: right;
+} */
+
+footer {
+    background-color: #FFCFCF;
+    border-radius: 30px 30px 0 0;
+    color: #000;
+    padding: 40px 100px;
+   
 }
+
+footer .mapaSitio {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+footer .mapaSitio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+footer .mapaSitio ul li i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    color: #EC078D; /* Cambia el color si lo deseas */
+    font-size: 16px; /* Tamaño del ícono */
+}
+
+footer .mapaSitio ul li {
+    margin: 8px 0;
+  
+}
+
+footer .mapaSitio ul li a {
+    color: #000;
+    text-decoration: none;
+  
+}
+
+footer .mapaSitio ul li a:hover {
+    color: #EC078D;
+}
+
+footer .mapaSitio ul:first-child {
+    flex-basis: 30%;
+}
+
+footer .mapaSitio ul:nth-child(2),
+footer .mapaSitio ul:nth-child(3) {
+    flex-basis: 20%;
+}
+
+footer .redesFooter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+footer .redesFooter a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .redesFooter a:hover {
+    color: #d1a267;
+}
+
+footer .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer .logo img {
+    max-width: 200px;
+}
+
+footer .copy {
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    border-top: 1px solid #3b322d;
+    padding-top: 10px;
+}
+
 .contactWhats, .subir {
     position: fixed;
     z-index: 999;
