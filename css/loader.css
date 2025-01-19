@@ -1,0 +1,38 @@
+/* loader */
+/* Estilos para el Loader */
+.loader {
+    position: fixed; /* Para que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255); /* Fondo blanco semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Asegúrate de que sea mayor que el del header */
+}
+
+/* Animación del Spinner */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #ec078d; /* Color principal */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Asegurar que el contenido no sea visible mientras carga */
+.contenido-principal {
+    display: none; /* Ocultar el contenido inicial */
+}

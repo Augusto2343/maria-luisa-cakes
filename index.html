@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maria luisa cakes</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
 </head>
 <body>
-    <header class="header">
+   
+    <div class="loader">
+        <img src="imagenes/Spinner@1x-2.1s-200px-200px.svg" alt="Cargando...">
+    </div>
+ 
+    <div class="contenido-principal" style="display: none;">
+        <header class="header">
             <img src="./imagenes/WhatsApp_Image_2024-12-20_at_10.33.03-removebg-preview.png" class="logoHeader" alt="logo">
             <div class="navbarLinea">
-            <nav class="navbar">
+            <nav class="navbar" data-aos="fade-up">
                 <a href="" class="linkNav">Home</a>
-                <a href="" class="linkNav">Categorias</a>
-                <a href="" class="linkNav">Quien Soy</a>
-                <a href="" class="linkNav">Galerias</a>
+                <a href="#categorias" class="linkNav">Categorias</a>
+                <a href="#quiensoy" class="linkNav">Quien Soy</a>
+                <a href="#galeria" class="linkNav">Galerias</a>
             </nav>
             <hr class="divisor">
     </div>  
-    <a href="" class="btnPreHeader"> Solicitar Presupuesto</a>
+    <a href="#contacto" class="btnPreHeader"  data-aos="fade-up"> Solicitar Presupuesto</a>
     </header>
     <main>
         <section class="banner">
@@ -32,14 +42,14 @@
                 </div>
              </div>
         <nav class="redes" id="navRedesBanner">
-            <a href="" class="linkRedes" id="fa"><i class="fa-brands fa-facebook-f" style="color: #ec078d;"></i></a>
-            <a href="" class="linkRedes" id="ins"><i class="fa-brands fa-instagram" style="color: #ec078d;"></i></i></a>
-            <a href="" class="linkRedes" id="tik"><i class="fa-brands fa-tiktok" style="color: #ec078d;"></i></a>
+            <a href="" class="linkRedesB" data-t="Facebook" id="fa"><i class="fa-brands fa-facebook-f" style="color: #ec078d;"></i></a>
+            <a href="" class="linkRedesB" data-t="Instagram" id="ins"><i class="fa-brands fa-instagram" style="color: #ec078d;"></i></i></a>
+            <a href="" class="linkRedesB" data-t="Tik Tok" id="tik"><i class="fa-brands fa-tiktok" style="color: #ec078d;"></i></a>
         </nav>
         </section>
 
     </main>
-    <div class="textCat">
+    <div class="textCat" id="categorias">
         <h3 class="tituloCat ">Categorias</h3>
       </div>
     <section class="categorias">
@@ -58,16 +68,16 @@
         </div>
         
     </section>
-    <section class="aboutme">
+    <section class="aboutme" id="quiensoy">
         <img src="imagenes\aboutmeMaria.jpg" class="imgAboutme" width="300">
        
         <div class="presentacion">
             <h2 class="tituloQuienSoy">Quien Soy</h2>
-            <div class="textPres">
+            <div class="textPres" data-aos="fade-down">
                 <p>¡Hola! Soy María Luisa, creadora de Maria Luisa Cakes. Hace seis años comencé este hermoso emprendimiento, impulsada por mi pasión por la pastelería, que nació en mi infancia, y por una necesidad familiar que me llevó a transformar ese amor en mi profesión.
 
                     Con el tiempo, me fui capacitando para ofrecerles tortas únicas y personalizadas, diseñadas con creatividad y atención al detalle. Desde estructuras con luces o movimientos hasta diseños originales que destacan en cualquier celebración, mi objetivo siempre ha sido hacer que cada torta sea especial y memorable.
-                    
+                    <br><br>
                     El reconocimiento y cariño de mis clientes me motivan a seguir creciendo. Mi sueño es que Maria Luisa Cakes no solo les brinde un excelente servicio, sino que también se convierta en un espacio de aprendizaje a través de cursos y seminarios en el futuro.
                     
                     Gracias por ser parte de este viaje y por hacer crecer este sueño. ¡Espero ser parte de sus momentos más especiales!
@@ -75,7 +85,7 @@
             </div>
         </div>
     </section>
-    <div class="textCat">
+    <div class="textCat" id="galeria">
         <h2 class="tituloCat">Galeria de imagenes</h2>
     </div>
    
@@ -89,10 +99,17 @@
             <div class="item"><img src="imagenes\CONTENIDO VISUAL\casamiento.jpg" alt="Imagen 6"></div>
             <div class="item"><img src="imagenes\CONTENIDO VISUAL\torta8.jpg" alt="Imagen 5"></div>
             <div class="item"><img src="imagenes\Torta Infantil\18.jpg" alt="Imagen 6"></div>
+            <div class="item"><img src="imagenes\Torta Infantil\5.jpg" alt="Imagen 6"></div>
+            <div class="item"><img src="imagenes\Torta Infantil\10.jpg" alt="Imagen 6"></div>
+            <div class="item"><img src="imagenes\Torta Infantil\26.jpg" alt="Imagen 6"></div>
+            <div class="item"><img src="imagenes\CONTENIDO VISUAL\torta2.jpg" alt="Imagen 5"></div>
         </div>
     </section>
-    
+    <div class="textCat" id="contacto">
+        <h2 class="tituloCat">Contáctanos</h2>
+    </div>
     <section class="contacto">
+     
         <div class="container">
             <div class="card">
                 <a class="singup">Contacto</a>
@@ -135,7 +152,7 @@
     <div class="redesFooter">
         <a href="" class="linkRedes" id="fa"><i class="fa-brands fa-facebook-f" style="color: #ec078d;"></i></a>
         <a href="" class="linkRedes" id="ins"><i class="fa-brands fa-instagram" style="color: #ec078d;"></i></i></a>
-        <a href="" class="linkRedes" id="tik"><i class="fa-brands fa-tiktok" style="color: #ec078d;"></i></a>
+        <a href="" class="linkRedes"  id="tik"><i class="fa-brands fa-tiktok" style="color: #ec078d;"></i></a>
 
     </div>
     <div class="logo">
@@ -145,7 +162,24 @@
         <p>2024 © Maria Luisa Cakes. Todos los derechos reservados</p>
     </div>
     </footer>
-    <script src="main.js"></script>
+    <div class="contactWhats">
+        <a href="https://wa.me/542964586304?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20sus%20servicios." target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+    <div class="subir">
+        <a href="#"><i class="bi bi-chevron-double-up"></i></a>
+      </div>
+    </div>
+        <script src="main.js"></script>
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicializar AOS -->
+    <script>
+        AOS.init();
+      </script>
+    
 </body>
 </html>
 

@@ -23,3 +23,13 @@ navRedes.onmouseleave = () =>{
     linkTik.classList.remove("fa-bounce");
 }
 
+/* Loader */
+$(document).ready(function () {
+    // Esperar 3 segundos antes de ocultar el loader
+    setTimeout(function () {
+        $(".loader").fadeOut("slow", function () {
+            $(this).remove(); // Elimina el loader del DOM
+            $(".contenido-principal").fadeIn("slow"); // Muestra el contenido
+        });
+    }, 1000); // Ajusta el tiempo aquí (milisegundos)
+});
