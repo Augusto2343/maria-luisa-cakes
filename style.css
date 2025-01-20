@@ -11,25 +11,33 @@
 }
 html {
     scroll-behavior: smooth;
-  }
-
-/* Header */
-.header {
-
-    background-color: transparent;
-    position: fixed;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 15%;
     width: 100%;
-    background-color: #FFCFCF;
-    border-radius: 0 0 20px 20px;
-    z-index: 1000;
+    padding: 0px;
+    margin: 0px;
+  }
+main{
+    width: 100%;
 
 }
 
+/* Header */
+.header {
+    position: fixed;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #ffcfcf70;
+    border-radius: 0 0 20px 20px;
+    z-index: 9999;
+    position: fixed top;
+    transition: 1s;
+    height: auto;
+}
+.header:hover{
+    background-color: #ffcfcf;
+}
 .btnPreHeader {
     background-color: #7e99a3de;
     padding: 8px;
@@ -41,7 +49,10 @@ html {
         0 1px 3px rgba(0, 0, 0, 0.06);
 
 }
-
+#divisionLogoLink{
+    opacity: 1;
+    border: 0.0px solid #5a5a5a;
+}
 .navbarLinea {
     display: flex;
     flex-flow: column nowrap;
@@ -73,12 +84,27 @@ html {
     width: 15%;
 }
 
+#desplegar{
+    opacity: 0;
+    display: none;
+    font-size: 24px;
+    background-color: rgba(90, 90, 90, 0);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.7s;
+}
+#desplegar:hover{
+    background-color: #7e99a3de;    
+}
 /* Banner general */
 .banner {
     background-color: #FFCFCF;
 
 }
-
+.navbar .desplegar{
+    display:flex;
+    opacity: 1;
+}
 .horizontal {
     width: 100%;
     display: flex;
@@ -137,9 +163,10 @@ html {
 
 /* Redes */
 .redes {
+    
     display: flex;
-    margin: 30px;
-    background-color: #FBF4DB;
+    margin: 25px;
+    background-image:linear-gradient(to right , #FBF4DB 84%, #7e99a3de );
     width: 40px;
     gap: 20px;
     flex-direction: column;
@@ -150,8 +177,16 @@ html {
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.7s;
 }
-
+.navOculto{
+    margin-left: -8px;
+    
+}
+.redes:hover{
+    z-index: 9999;
+    opacity: 1;
+}
 .linkRedes {
     background-color: transparent;
     color: black;
@@ -175,18 +210,19 @@ html {
 
 .linkRedesB:hover::after {
     opacity: 1;
+    z-index: 999;
 }
 /* Estilos generales de la sección de categorías */
 .categorias {
     display: flex;
-    gap: 30px;
-    justify-content: center;
+
+    justify-content: space-evenly;
 }
 
 /* Estilos del título */
 .textCat {
     text-align: center;
-    margin: 50px;
+    margin-top: 20px;
 }
 
 .tituloCat {
@@ -198,8 +234,9 @@ html {
 
 /* Estilos generales de las tarjetas */
 .tarjetaCat {
-    width: 15%;
-    margin: 40px;
+    min-width: 15%;
+    margin-bottom: 40px;
+
     height: 300px;
     border-radius: 50px;
     background-color: #000000;
@@ -278,17 +315,26 @@ html {
 
 /* estilos about me */
 .presentacion{
-    width: 80%;
-    
+    width: auto;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: baseline; 
+   gap: 50px;
 }
 .aboutme {
-    margin: 80px 0;
+    padding-top: 80px;
+    padding-bottom:80px ;
     background-color: #FFCFCF;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
 .aboutme .imgAboutme {
-    margin: 160px ;
+    width: 300px;
     border-radius: 60px 0 60px 0;
 }
 
@@ -297,15 +343,16 @@ html {
     font-weight: 128;
     font-style: normal;
     font-size: 40px;
-    margin: 220px 0 50px;
+
 }
 
 .textPres {
-    width: 80%;
+width: 100%;
 }
 
 .textPres p {
     text-align: justify;
+    max-width: 800px;
 }
 
 
@@ -357,9 +404,10 @@ html {
 .contacto {
     display: flex;
     justify-content: space-around;
-    margin: 200px;
-    width: 80%;
-
+    gap: 40px;
+    width: 100%;
+    flex-flow: row wrap;
+    
 }
 
 .singup {
@@ -487,7 +535,9 @@ textarea:focus {
     align-items: center;
     justify-content: center;
 }
-
+#mapa{
+    width: 600px;
+}
 /* estilos footer */
 /* footer {
     display: flex;
@@ -554,6 +604,7 @@ footer .logo {
 } */
 
 footer {
+    margin-top: 20px;
     background-color: #FFCFCF;
     border-radius: 30px 30px 0 0;
     color: #000;
@@ -565,8 +616,20 @@ footer .mapaSitio {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-}
+    flex-flow: row nowrap;
 
+}
+.itemContacto{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.subDivisionMapSitio{
+    display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
 footer .mapaSitio ul {
     list-style: none;
     padding: 0;
@@ -625,7 +688,12 @@ footer .logo {
     justify-content: center;
     margin-bottom: 20px;
 }
-
+.copyDig{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
 footer .logo img {
     max-width: 200px;
 }
@@ -637,27 +705,36 @@ footer .copy {
     border-top: 1px solid #3b322d;
     padding-top: 10px;
 }
-
-.contactWhats, .subir {
+.btnLat{
+    display: flex;
+    flex-flow: column nowrap;
     position: fixed;
+    left: 90%;
+    top: 80%;
     z-index: 999;
+    gap: 15px;
+}
+.contactWhats, .subir {
+
     padding: 15px;
     border-radius: 50%; 
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
-    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.201); 
+    transition: all 0.7s ease;
     display: flex;
     justify-content: center;
     align-items: center;
+}.subir:hover{
+    background-color: #000000a8;
 }
-
 .contactWhats {
-    left: 88%; 
-    top: 90%;
-    background-color: rgb(0, 255, 0); 
+    background-color: rgba(0, 255, 0, 0.416); 
     width: 20px; 
     height: 20px;
-}
 
+}
+.contactWhats:hover{
+    background-color: rgb(0, 255, 0);
+}
 .contactWhats a .bi {
     color: white;
     font-size: 20px; 
@@ -670,9 +747,9 @@ footer .copy {
 }
 
 .subir {
-    left: 92%; 
+    left: 9%; 
     top: 90%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.415); 
     width: 20px; 
     height: 20px;
 }
@@ -686,4 +763,181 @@ footer .copy {
 .subir a .bi:hover {
     color: #EC078D  ; 
     font-size: 30px; 
+}
+
+/*medias*/
+@media (max-width:1400px) {
+    .header{
+        gap: 5%;
+    }
+    .divisor{
+        width: 160%;
+    }
+}
+@media (max-width:1250px){
+    .textPres p{
+        max-width: 600px;
+    }
+    .categorias{
+        justify-content: space-evenly;
+    }
+}
+@media (max-width:1050px){
+    .contacto{
+        width: 100%;
+        margin: 0;
+        justify-content: center;    
+        align-items: center;
+    }
+    #mapa{
+        width: 450px;
+    }
+    .divisor{
+        width: 130%;
+        opacity: 0;
+        display: none;
+    }
+    .textPres p{
+        max-width: 500px;
+    }
+    .header{
+        margin: 10px;
+    }
+    .navbar{
+        flex-flow:column;
+    }
+    #desplegar{
+        opacity: 1;
+        display:flex;
+        margin-right: 10px;
+    }
+    .ocultar{
+        display: none;
+        opacity: 0;
+    }
+    .header{
+        justify-content: space-around;
+        margin: 0;
+    }
+}
+@media (max-width:1120px){
+    .tarjetaCat{
+        min-width: 20%;
+    }
+}
+@media (max-width:860px){
+    .textPres p{
+        max-width: 400px;
+    }
+    .tarjetaCat{
+        min-width: 25%;
+    }
+    .bannerImg{
+        margin: 50px;
+    }
+    .btnPreHeader{
+        padding: 5px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:780px){
+    footer .mapaSitio{
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    .banner{
+        padding-top: 40px;
+    }
+    .cambioFuente{
+        font-size: 70px;
+    }
+    .tituloInicio{
+        font-size: 25px;
+    }
+    .aboutme{
+        flex-flow: column wrap;
+
+    }
+    .textPres p{
+        max-width: 600px;
+    }
+    .aboutme .imgAboutme{
+        width: 300px;
+        border-radius: 0 60px 0 60px;
+    }
+    .presentacion{
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:620px){
+    .textPres p{
+        max-width:500px;
+    }
+    .banner{
+        padding-top: 80px;
+    }
+    .categorias{
+        flex-flow:column nowrap;
+        align-items: center ;
+        width: 100%;
+    }
+    .tarjetaCat{
+        width: 50%;
+    }
+    .bannerImg{
+        margin: 20px;
+    }   
+}
+@media (max-width:640px){
+    .logoHeader{
+        min-width: 130px;
+        margin-bottom: 10px;
+    }
+    .mostrar{
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar{
+        align-items: center;
+    }
+    #divisionLogoLink{
+        min-width: 80%;
+        border: 0.7px solid #5a5a5a;
+    }
+}
+@media (max-width:500px){
+    .textPres p{
+        max-width: 450px;
+    }
+    .bannerImg{
+        min-width: 300px;
+    }
+}
+@media (max-width:450px){
+    footer{
+        padding: 20px 10px
+    }
+    #mapa{
+        width: 250px;
+    }
+    .card{
+        width: 320px;
+    }
+    .textPres p{
+        max-width: 330px;
+    }
+    .btnLat{
+        left: 85%;
+    }
+}
+@media (max-width:340px){
+    .textPres p{
+        max-width: 300px;
+    }
 }

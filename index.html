@@ -20,16 +20,20 @@
     <div class="contenido-principal" style="display: none;">
         <header class="header">
             <img src="./imagenes/WhatsApp_Image_2024-12-20_at_10.33.03-removebg-preview.png" class="logoHeader" alt="logo">
+            <hr id="divisionLogoLink" class="ocultar">
             <div class="navbarLinea">
-            <nav class="navbar" data-aos="fade-up">
+            <nav class="navbar ocultar" data-aos="fade-up">
                 <a href="" class="linkNav">Home</a>
                 <a href="#categorias" class="linkNav">Categorias</a>
                 <a href="#quiensoy" class="linkNav">Quien Soy</a>
                 <a href="#galeria" class="linkNav">Galerias</a>
+                
             </nav>
             <hr class="divisor">
-    </div>  
-    <a href="#contacto" class="btnPreHeader"  data-aos="fade-up"> Solicitar Presupuesto</a>
+            </div>
+            <a href="#contacto" class="btnPreHeader ocultar"   data-aos="fade-up"> Solicitar Presupuesto</a>
+
+    <i class="fa-solid fa-bars" id="desplegar"></i>
     </header>
     <main>
         <section class="banner">
@@ -41,7 +45,7 @@
                     <img src="imagenes/pooh.png">
                 </div>
              </div>
-        <nav class="redes" id="navRedesBanner">
+        <nav class="redes navOculto" id="navRedesBanner">
             <a href="" class="linkRedesB" data-t="Facebook" id="fa"><i class="fa-brands fa-facebook-f" style="color: #ec078d;"></i></a>
             <a href="" class="linkRedesB" data-t="Instagram" id="ins"><i class="fa-brands fa-instagram" style="color: #ec078d;"></i></i></a>
             <a href="" class="linkRedesB" data-t="Tik Tok" id="tik"><i class="fa-brands fa-tiktok" style="color: #ec078d;"></i></a>
@@ -69,8 +73,7 @@
         
     </section>
     <section class="aboutme" id="quiensoy">
-        <img src="imagenes\aboutmeMaria.jpg" class="imgAboutme" width="300">
-       
+        <img src="imagenes\aboutmeMaria.jpg" class="imgAboutme">
         <div class="presentacion">
             <h2 class="tituloQuienSoy">Quien Soy</h2>
             <div class="textPres" data-aos="fade-down">
@@ -84,6 +87,8 @@
                 </p>
             </div>
         </div>
+
+       
     </section>
     <div class="textCat" id="galeria">
         <h2 class="tituloCat">Galeria de imagenes</h2>
@@ -137,16 +142,17 @@
             </div>
         </div>
         <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62355471.829228625!2d-112.78450328111309!3d-17.465649724261375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4b1591729e60f9%3A0xffbf8ecc1d992362!2sMaria%20Luisa%20Cakes!5e0!3m2!1ses-419!2sar!4v1735862503611!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62355471.829228625!2d-112.78450328111309!3d-17.465649724261375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4b1591729e60f9%3A0xffbf8ecc1d992362!2sMaria%20Luisa%20Cakes!5e0!3m2!1ses-419!2sar!4v1735862503611!5m2!1ses-419!2sar"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
         </div>
     </section>
     <footer >
     <div class="mapaSitio">
         <ul>Contacto
-            <li><i class="fa-solid fa-envelope"></i></i><a href="">maydasoloparavos@gmail.com</a></li>
-            <li><i class="fa-solid fa-phone"></i><a href="">2964-586304</a></li>
-            <li><i class="fa-solid fa-location-dot"></i><a href="">Hermana María Rodas 679 - Tierra del Fuego</a></li>
+            <li class="itemContacto"><i class="fa-solid fa-envelope"></i></i><a href="">maydasoloparavos@gmail.com</a></li>
+            <li class="itemContacto"><i class="fa-solid fa-phone"></i><a href="">2964-586304</a></li>
+            <li class="itemContacto"><i class="fa-solid fa-location-dot"></i><a href="">Hermana María Rodas 679 - Tierra del Fuego</a></li>
         </ul>
+        <div class="subDivisionMapSitio">
         <ul>Destacados
             <li></i><a  >Eventos </a></li>
             <li><a > Estructurales</a></li>
@@ -159,6 +165,7 @@
             <li></i><a href="#ontacto">Contacto</a></li>
         </ul>
     </div>
+    </div>
  
     <div class="logo">
         <img src="./imagenes/WhatsApp_Image_2024-12-20_at_10.33.03-removebg-preview.png">
@@ -166,8 +173,10 @@
 
     <div class="copy">
         <p>2024 © Maria Luisa Cakes. Todos los derechos reservados</p>
+        <p class="copyDig">Desarrollado por :<a href="https://digitalme.com.ar"><img src="./imagenes/sf_logoRedondo (1).png" alt="" width="50px"></a></p>
     </div>
     </footer>
+    <div class="btnLat">
     <div class="contactWhats">
         <a href="https://wa.me/542964586304?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20sus%20servicios." target="_blank">
             <i class="bi bi-whatsapp"></i>
