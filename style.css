@@ -23,65 +23,102 @@ main{
 /* Header */
 .header {
     position: fixed;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #ffcfcf70;
-    border-radius: 0 0 20px 20px;
-    z-index: 9999;
-    position: fixed top;
-    transition: 1s;
-    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 2%;
+    background-color: rgba(255, 207, 207, 0.9);
+    z-index: 1000;
+ border-radius: 0 30px 30px 30px;
+    transition: background-color 0.3s ease-in-out;
 }
-.header:hover{
+
+.header:hover {
     background-color: #ffcfcf;
 }
-.btnPreHeader {
-    background-color: #7e99a3de;
-    padding: 8px;
-    border-radius: 20px;
-    padding: 10px 25px;
-    color: black;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-        0 1px 3px rgba(0, 0, 0, 0.06);
 
-}
-#divisionLogoLink{
-    opacity: 1;
-    border: 0.0px solid #5a5a5a;
-}
-.navbarLinea {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-bottom: 20px;
+/* Logo styles */
+.logoHeader {
+    width: 15%;
+    max-width: 160px;
 }
 
-.divisor {
-    width: 200%;
-    border: 1px solid #5a5a5a;
 
-}
 
+/* Navbar styles */
 .navbar {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .linkNav {
     text-decoration: none;
-    color: black;
-    font-size: 18px
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    transition: color 0.3s ease-in-out;
 }
 
-.logoHeader {
-    width: 15%;
+.linkNav:hover {
+    color: #7e99a3;
+}
+
+
+/* Button styles */
+/* Botón pre-header con efectos */
+.btnPreHeader {
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height:auto;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius:  25px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 15px;
+    letter-spacing: 0.045em;
+    overflow: hidden;
+
+}
+
+/* Fondo animado del texto */
+.btnPreHeader span {
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(49% 81% at 45% 47%, #7e99a314 0%, #7e99a3 100%),radial-gradient(113% 91% at 17% -2%, #7e99a3de 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #7e99a3 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #7e99a3de 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #7e99a314 2%, #7e99a3 97%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Efecto en los bordes usando SVG */
+.btnPreHeader svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btnPreHeader svg rect {
+    stroke:#7e99a3;
+    stroke-width: 2;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    transition: all 600ms ease;
+}
+
+.btnPreHeader:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
 }
 
 #desplegar{
@@ -94,7 +131,8 @@ main{
     transition: 0.7s;
 }
 #desplegar:hover{
-    background-color: #7e99a3de;    
+    background-color: #7e99a3de;  
+
 }
 /* Banner general */
 .banner {
@@ -166,7 +204,7 @@ main{
     
     display: flex;
     margin: 25px;
-    background-image:linear-gradient(to right , #FBF4DB 84%, #7e99a3de );
+    background-image:linear-gradient(to right , #FBF4DB 84%,  #ec078d8b);
     width: 40px;
     gap: 20px;
     flex-direction: column;
@@ -223,6 +261,7 @@ main{
 .textCat {
     text-align: center;
     margin-top: 20px;
+    margin: 40px;
 }
 
 .tituloCat {

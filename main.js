@@ -59,3 +59,37 @@ navLat.onmouseenter = () =>{
 navLat.onmouseleave = () =>{
     navLat.classList.add("navOculto");
 }
+
+
+/* contacto */
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const serviceId = 'service_00wfemq';
+    const templateId = 'template_lr58a5h';
+    const apikey = '_15gZsoh6-UZiR1UG';
+
+    emailjs.sendForm(serviceId, templateId, this, apikey)
+        .then((result) => {
+            console.log(result.text);
+            this.reset();
+
+            Swal.fire({
+                title: "Mensaje enviado!",
+                text: "Gracias por contactarme.",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        })
+        .catch((error) => {
+            console.error(error);
+
+            Swal.fire({
+                title: "Error!",
+                text: "Hubo un problema al enviar el mensaje. Por favor, inténtelo de nuevo más tarde.",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
+        });
+});
